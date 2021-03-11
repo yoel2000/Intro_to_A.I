@@ -27,21 +27,21 @@ print("search(3):")
 for i in range(100):
     x=search(3)
     max_depth += x[0]
-    sum_item+=x[1]
+    sum_item += x[1]
 print("Average depth", max_depth/100)
 print("Average items", sum_item/100)
 
 max_depth=0
-sum_item=0
+max_item=0
 
 print("search(4):")
 for i in range(10):
     print(i)
-    x=search(4)
-    max_depth += x[0]
-    sum_item+=x[1]
+    n=search(4)
+    max_depth += n[0]
+    max_item+=n[1]
 print("Average depth", max_depth/100)
-print("Average items", sum_item/100)
+print("Average items", max_item/100)
 
 
 answer=search(2)
