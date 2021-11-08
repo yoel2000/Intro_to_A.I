@@ -1,2 +1,2 @@
 # Intro_to_A.I.
-Exercise one.
+Exercises of the course Intro to Artificial Intelligence.
