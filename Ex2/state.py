@@ -82,10 +82,18 @@ def hdistance2(s):  # for h2 (Manhattan)
     initial_state = s[0]
     initial_config = initial_state
     manDict = 0
+    size = math.sqrt(len(initial_state))
     for i,item in enumerate(initial_config):
-        prev_row,prev_col = int(i/ 3) , i % 3
-        goal_row,goal_col = int(item /3),item % 3
-        manDict += abs(prev_row-goal_row) + abs(prev_col - goal_col)
-    print(manDict)
+        prev_row,prev_col = int(i/size ), i % size
+        goal_row,goal_col = int(item /size),item % size
+        if item != 0:
+            manDict += abs(prev_row-goal_row) + abs(prev_col - goal_col)
     return manDict
 
+"""
+Answer to question4: 
+Without surprise, thee is a big difference between the two heuristics. 
+There is a big difference about the runtime and about the average items.
+There is a difference because the heuritical function is more good because the return value is higher. 
+So, the result is better.
+"""
